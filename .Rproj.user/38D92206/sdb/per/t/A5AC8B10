@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Untitled\"\nauthor: \"Vishesh Kakarala\"\ndate: \"July 21, 2016\"\noutput: html_document\n---\n\n```{r}\nlibrary('RJSONIO')\nlibrary('rpart')\nlibrary('party')\nlibrary('partykit')\nlibrary('caret')\nlibrary('tree')\n\nlines <- readLines(\"E:/R backup/test_project/yelp/yelp_academic_dataset_business.json\") \nbusiness_data <- as.data.frame(t(sapply(readLines(\"E:/R backup/test_project/yelp/yelp_academic_dataset_business.json\"), fromJSON)))\n\n\nstates <- data.frame(business_data = unique(business_data$state))\n\nfor (i in 1:11)\n{\n  states$review_count[i] <- mean(busness_data$review_count[business_data$state == states$states[i]],na.rm = TRUE)",
+    "created" : 1469144333761.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "195236186",
+    "id" : "A5AC8B10",
+    "lastKnownWriteTime" : 1469144356,
+    "path" : "D:/test.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
